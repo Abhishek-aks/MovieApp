@@ -32,8 +32,8 @@ function handleError() {
     const err = document.querySelector(".error");
     err.innerHTML = '';
     const img = document.createElement('img');
-    img.src = "Error-handle.png";
-    img.alt = "Something Went Wrong";
+    img.src = "images/Error-handle.png";
+    img.alt = "Something Went Wrong...Check input Details..!";
     err.appendChild(img);
     buffer.classList.add('hide');
     document.querySelector('main').appendChild(err);
@@ -54,26 +54,18 @@ function makeMovieCards(movies) {
         re_Dir.className = 're-dir';
         re_Dir.href = `https://www.imdb.com/title/${movie.imdbID}/`
         let my_Str = `<div class="movie">
-        <div class="poster">
-        <img src="${movie.Poster === 'N/A' ? `N_A.jpg` : movie.Poster}" alt="movie-poster">
-        </div>
-        <div class="num">
-                ${i}
+            <div class="num">${i}</div>
+            <div class="poster">
+                <img src="${movie.Poster === 'N/A' ? `N_A.jpg` : movie.Poster}" id="movie-img" alt="movie-poster">
+                <p id="Title">${movie.Title}</p>
+                <div class="right low">
+                    <p id="year">${movie.Year} </p>
+                    <pre> | | </pre>
+                    <p id="type">${movie.Type}</p>
+                </div>
             </div>
-            <div class="title">
-            ${movie.Title}
-            </div>
-            <div class="low">
-            <div class="right">
-            <div class="year">
-            ${movie.Year} |
-            </div>
-            <div class="type">
-            | ${movie.Type}
-            </div>
-            </div>
-            </div>
-            </div>`;
+        </div>`;
+
         re_Dir.innerHTML = my_Str;
         cont.appendChild(re_Dir);
         i++;

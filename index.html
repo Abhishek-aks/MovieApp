@@ -10,21 +10,22 @@
 </head>
 
 <body>
-
-    <h1 class="header"> IMDB MOVIES APP</h1>
-    <div class="search-bar">
-        <div class="search">
-            <input type="text" id="api" placeholder="Enter Api_key Here -610ff6df">
-            <img src="images/key 1.png" class="icon">
+    <header class="top-layer">
+        <h1 class="header"> IMDB MOVIES APP</h1>
+        <div class="search-bar">
+            <div class="search">
+                <input type="text" id="api" value="610ff6df" placeholder="Enter Api_key Here">
+                <img src="images/key 1.png" class="icon">
+            </div>
+            <pre> </pre>
+            <div class="search">
+                <input type="text" id="movie" placeholder="Enter Movie Name Here">
+                <img src="images/searchIcon.png" class="icon">
+            </div>
+            <pre> </pre>
+            <button id="search-btn">Search</button>
         </div>
-        <pre> </pre>
-        <div class="search">
-            <input type="text" id="movie" placeholder="Enter Movie Name Here">
-            <img src="images/searchIcon.png" class="icon">
-        </div>
-        <pre> </pre>
-        <button id="search-btn">Search</button>
-    </div>
+    </header>
 
 
     <!-- --------------------------------------------------------MOVIE CARDS---------------------------------------------------------- -->
@@ -40,6 +41,51 @@
         <div class="error">
         </div>
     </main>
+
+    <!-- <div class="num">${i}</div>
+        <div class="poster">
+            <img src="${movie.Poster === 'N/A' ? `N_A.jpg` : movie.Poster}" alt="movie-poster">
+         </div>
+        <div class="title">${movie.Title}</div>
+        <div class="low">
+             <div class="right">
+                 <div class="year">${movie.Year}  </div>
+                 <div class="type"> | | ${movie.Type}</div>
+             </div>
+         </div>
+         </div>`;
+
+         <div id="movies"> -->
+
+    <!-- <div id="Cards-container">
+                <div id="container">
+
+                    <div id="cards">
+                        <div id="details">
+                            <h1 id="rank">1</h1>
+                        </div>
+                        <div id="photo">
+                            <img src="images/movie-1.png" id="movie-img" alt="pic">
+                            <p id="Title">Jurassic World</p>
+                            <div class="text-area">
+                                <p id="Year">2008</p>
+                                <p id="imdbID">JWH2008</p>
+                            </div>
+                        </div>
+                    </div> 
+
+
+                <div class="movie">
+                    <div class="num">${i}</div>
+                    <div class="poster">
+                        <img src="${movie.Poster === 'N/A' ? `N_A.jpg` : movie.Poster}" id="movie-img" alt="movie-poster">
+                        <p id="Title">${movie.Title}</p>
+                        <div class="right low">
+                            <p id="year">{movie.Year} </p>
+                            <p id="type">| | ${movie.Type}</p>
+                        </div>
+                    </div>
+                </div>`;-->
 
 
     <script src="movie.js"></script>

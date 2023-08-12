@@ -9,14 +9,22 @@
 }
 
 body {
-    /* background: #282b4c; */
+    background: transparent;
     color: white;
+
 }
 
-h1 {
+.top-layer {
+    top: 0px;
+    background-image: url(./images/background1.png);
+    background-size: 100% 100%;
+}
+
+h1,
+.num {
     -webkit-text-fill-color: transparent;
     /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #0296E5;
     font-size: 64px;
     font-family: "Montserrat";
@@ -30,7 +38,8 @@ h1 {
     top: 21px;
     height: 64px;
     font-weight: 600;
-    margin: 40px auto 50px;
+    margin: 0 auto 50px;
+    background: transparent;
 }
 
 .search-bar {
@@ -42,6 +51,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: transparent;
 }
 
 .search {
@@ -56,13 +66,18 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
+pre {
+    background: transparent;
+}
+
 .search input {
     flex: 1;
     height: 100%;
     border: 0;
     outline: 0;
     font-size: 16px;
-    background: #3A3F47;
+    background: transparent;
+    back
 }
 
 #search-btn {
@@ -92,4 +107,213 @@ h1 {
 
 .icon:hover {
     scale: 1.15;
+}
+
+
+/* ---------------------------------------------CARD--------------------------------------- */
+
+.loader {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.buffer {
+    border: 6px solid #bfbfbf7e;
+    border-top: 6px solid #0296E5;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    animation: buffer 1s ease-in-out infinite;
+}
+
+@keyframes buffer {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+
+/* Movie Section */
+.re-dir {
+    height: 300px;
+    text-decoration: none;
+    width: 18vw;
+    margin-bottom: 30px;
+    /* box-shadow: 5px 5px 5px #32445c inset; */
+}
+
+
+#movie-container {
+    display: grid;
+    width: 90vw;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+@media screen and (max-width: 1200px) {
+    #movie-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .poster>img {
+        width: 16vw;
+        height: 30vh;
+        text-align: center;
+        margin-left: 180;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #movie-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .poster>img {
+        width: 21vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #movie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .poster>img {
+        width: 16vw;
+        height: 30vh;
+    }
+}
+
+.movie {
+    margin-bottom: 20 px;
+    height: auto;
+    display: flex;
+    /* justify-content: center; */
+    color: white;
+    width: 14vw;
+    height: 65vh;
+
+}
+
+
+/* .movie:hover {
+    scale: 1.02;
+    animation: shake 1.1s ease-in-out;
+} */
+
+@keyframes shake {
+
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    12.5%,
+    62.5% {
+        transform: rotate(5deg);
+    }
+
+    37.5%,
+    87.5% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* ................................  */
+.poster {
+    width: 200px;
+    height: 300px;
+    top: 325px;
+    left: 153px;
+    border-radius: 16px;
+    margin: 5px 15px;
+}
+
+.poster>img {
+    text-align: center;
+    width: 200px;
+    height: 250px;
+}
+
+.num {
+    position: absolute;
+    font-size: 130px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    padding-left: 0px;
+    margin-top: 180px;
+    background: transparent;
+}
+
+
+
+#Title,
+#year,
+#type {
+    width: 80%%;
+    font-family: "poppins";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    text-align: center;
+}
+
+/* #year,*/
+
+#type {
+    /* margin-left: 20px; */
+    text-align: right;
+    font-size: 14px;
+}
+
+#year {
+    margin-top: 2px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+#Title {
+    margin-top: 2px;
+    margin-left: 35px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+
+.right {
+    margin-left: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.error>img {
+    width: 380px;
+    height: 350px;
+    margin: auto;
 }
